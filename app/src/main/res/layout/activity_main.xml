@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:background="@color/gray"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edt_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number"
+            android:inputType="text"/>
+        <TextView
+            android:id="@+id/tv_result"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/edt_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text=""/>
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp">
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/b2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="2"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/b1"
+            app:layout_constraintRight_toLeftOf="@+id/b3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="3"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/b2"
+            app:layout_constraintRight_toLeftOf="@+id/bplus"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bplus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/b3"
+            app:layout_constraintRight_toLeftOf="@+id/bc"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="C"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/bplus"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/b4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="8dp"
+            android:text="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/b5"
+            app:layout_constraintTop_toBottomOf="@id/b1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/b5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/b4"
+            app:layout_constraintRight_toLeftOf="@id/b6"
+            app:layout_constraintTop_toBottomOf="@id/b2" />
+
+        <Button
+            android:id="@+id/b6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="6"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/b5"
+            app:layout_constraintRight_toLeftOf="@id/bminus"
+            app:layout_constraintTop_toBottomOf="@id/b3" />
+
+        <Button
+            android:id="@+id/bminus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="-"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/b6"
+            app:layout_constraintRight_toLeftOf="@id/bac"
+            app:layout_constraintTop_toBottomOf="@id/bplus" />
+
+        <Button
+            android:id="@+id/bac"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="AC"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/bminus"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bc" />
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <Button
+                android:id="@+id/b7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="7"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/b8"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/b8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="8"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/b7"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/b9"
+                />
+            <Button
+                android:id="@+id/b9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="9"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/b8"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/bmultiply"
+                />
+            <Button
+                android:id="@+id/bmultiply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="*"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/b9"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <Button
+                android:id="@+id/b0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="0"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/bphay"
+                app:layout_constraintTop_toBottomOf="@id/b7" />
+
+            <Button
+                android:id="@+id/bphay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text=","
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/b0"
+                app:layout_constraintRight_toLeftOf="@id/bdivided"
+                app:layout_constraintTop_toBottomOf="@id/b9" />
+
+            <Button
+                android:id="@+id/bdivided"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="/"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/bphay"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bmultiply" />
+
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+            android:id="@+id/bequal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="="/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
